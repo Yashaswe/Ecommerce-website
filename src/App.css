@@ -2,7 +2,6 @@
 
 * {
   margin: auto;
-  text-align: center;
 }
 
 .login-form {
@@ -39,7 +38,7 @@
 }
 .mycart {
   float: left;
-  width: 65%;
+  width: 63%;
   border-right: black solid 1px;
 }
 
@@ -62,6 +61,7 @@
 .heading {
   font-family: "Source Sans 3", sans-serif;
   margin-top: 15px;
+  text-align: center;
 }
 
 .item_title {
@@ -72,6 +72,7 @@
 .item_price {
   color: orange;
   text-align: left;
+  font-size: 20px;
 }
 
 .item_quantity {
@@ -126,8 +127,8 @@
 }
 
 .descriptionPage {
-  display: flex;
-  justify-content: space-around;
+  text-align: left;
+  padding: 20px;
 }
 
 .cartNo {
@@ -135,15 +136,16 @@
   color: black;
   height: 18px;
   width: 18px;
-  font-size: 15px;
+  font-size: 12px;
   border-radius: 50%;
   margin-left: 3px;
   display: inline-block;
 }
 
 .checkout {
-  width: 33%;
+  width: 30%;
   float: right;
+  text-align: center;
 }
 
 .checkoutTable {
@@ -183,4 +185,20 @@
   border: none;
   background-color: white;
   cursor: pointer;
+}
+
+.description_right {
+  float: right;
+  width: 50%;
+  padding: 10px;
+  text-align: left;
+}
+.description_left {
+  float: left;
+  width: 30%;
+}
+
+.item_image_description {
+  height: 230px;
+  width: 200px;
 }

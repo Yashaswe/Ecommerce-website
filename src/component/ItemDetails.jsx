@@ -2,29 +2,33 @@ import { useLocation } from "react-router-dom";
 import { CartContext } from "../App";
 import { useContext } from "react";
 import Navbar from "./Navbar";
+import { FaRegHeart } from "react-icons/fa";
+
 const ItemDetails = () => {
   const value = useContext(CartContext);
   const { state } = useLocation();
   const { item, id } = state;
-  console.log(item);
   return (
     <div>
       <Navbar></Navbar>
       <div className="descriptionPage">
         <div className="description_left">
-          <img src=""></img>
+          <img className="item_image_description" src={item.image} />
         </div>
         <div className="description_right">
           <h2>{item.title}</h2>
-          <img className="item_image" src={item.image} />
-          <p>{item.description}</p>
-          <p>{item.price}</p>
-          <input
-            className="addToCart"
-            type="button"
-            value="cart"
+          <br />
+          <div>{item.description}</div>
+          <div className="item_price">${item.price}</div>
+          <div>Ratings: {item.rating.rate}</div>
+          <button
+            className="buttonicon addToCart"
             onClick={() => value.addToCart(item)}
-          ></input>
+          >
+            <h2>
+              <FaRegHeart />
+            </h2>
+          </button>
         </div>
       </div>
     </div>

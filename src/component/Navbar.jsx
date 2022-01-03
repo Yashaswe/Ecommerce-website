@@ -10,13 +10,11 @@ const Navbar = () => {
   useEffect(() => {
     async function getCategories() {
       try {
-        const url_category = "http://localhost:3001/categories";
-        const response = await fetch(url_category, {
-          method: "POST",
-        });
-
+        const url_category = "https://fakestoreapi.com/products/categories";
+        const response = await fetch(url_category);
         const data = await response.json();
-        setCategories(data.categories);
+        console.log(data);
+        setCategories(data);
       } catch (error) {}
     }
     getCategories();

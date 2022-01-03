@@ -26,7 +26,7 @@ const Checkout = (items) => {
             <td className="checkout_item_price"> ${item.price}</td>
             <td className="checkout_item_price">
               {" "}
-              ${item.quantity * item.price}
+              ${Math.round(item.quantity * item.price * 100) / 100}
             </td>
           </tr>
         ))}
