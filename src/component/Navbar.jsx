@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react/cjs/react.development";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../App.jsx";
 
