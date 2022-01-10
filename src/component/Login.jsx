@@ -1,7 +1,6 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-const Login=()=>{
-    
+const Login = () => {
   const [error, setError] = useState(null);
   const [loading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("mor_2314");
@@ -10,7 +9,7 @@ const Login=()=>{
   const navigate = useNavigate();
 
   async function loginUser() {
-    fetch("http://localhost:3001/login", {
+    /* fetch("http://localhost:3001/login", {
       method: "POST",
       body: JSON.stringify({
         username: "mor_2314",
@@ -19,12 +18,16 @@ const Login=()=>{
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
-        window.localStorage.setItem("token", JSON.stringify(result.token));
-        if (result.token != "") {
-          navigate("/dashboard");
-        }
-      });
+        console.log(result);*/
+    // window.localStorage.setItem("token", JSON.stringify(result.token));
+    window.localStorage.setItem(
+      "token",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+    );
+    if (localStorage.getItem("token") != "") {
+      navigate("/dashboard");
+    }
+    // });
   }
 
   return (
@@ -60,8 +63,6 @@ const Login=()=>{
       </div>
     </div>
   );
-
-
-}
+};
 
 export default Login;

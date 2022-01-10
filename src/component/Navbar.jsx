@@ -13,7 +13,6 @@ const Navbar = () => {
         const url_category = "https://fakestoreapi.com/products/categories";
         const response = await fetch(url_category);
         const data = await response.json();
-        console.log(data);
         setCategories(data);
       } catch (error) {}
     }
